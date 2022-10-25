@@ -22,8 +22,11 @@ class Person
         # if happiness is less than zero
         @happiness = 0 unless @happiness > 0
     end
-    def clean
+    def clean?
         @hygiene > 7
+    end
+    def happy?
+        @happiness > 7
     end
     def take_bath
         self.hygiene = @hygiene + 4
@@ -66,8 +69,6 @@ puts joy.happiness
 puts joy.hygiene
 # joy.hygiene=20
 puts joy.hygiene
-
-puts joy.clean
 
 p ann = Person.new("ann")
 # ann.start_conversation(steve, 'politics')
